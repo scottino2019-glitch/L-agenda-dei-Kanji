@@ -1,0 +1,6 @@
+{
+  "name": "L'Agenda dei Kanji",
+  "description": "Agenda perpetua giapponese di 366 giorni con ricorrenze culturali, spazio puntinato bullet journal e kanji del giorno con letture, storia della forma ed esempi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-sans-ui: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-jp: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-mono-num: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans-ui);
+    background-color: #E3DACB;
+    color: #1A1715;
+    font-size: 16px;
+  }
+
+  .font-editorial {
+    font-family: var(--font-serif-editorial);
+  }
+
+  .font-jp {
+    font-family: var(--font-jp);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono-num);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.dot-grid-paper {
+  background-color: #FFFDF8;
+  background-image: radial-gradient(#9E927E 1.35px, transparent 1.35px);
+  background-size: 24px 24px;
+  background-position: 12px 12px;
+}
+
+.book-spine-shadow {
+  background: linear-gradient(
+    to right,
+    rgba(26, 23, 21, 0) 0%,
+    rgba(26, 23, 21, 0.06) 70%,
+    rgba(26, 23, 21, 0.14) 100%
+  );
+}
+
+.book-spine-shadow-right {
+  background: linear-gradient(
+    to left,
+    rgba(26, 23, 21, 0) 0%,
+    rgba(26, 23, 21, 0.05) 75%,
+    rgba(26, 23, 21, 0.12) 100%
+  );
+}
+
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+  }
+  .agenda-spread-sheet {
+    box-shadow: none !important;
+    border: 1px solid #D6D0C4 !important;
+  }
+}
